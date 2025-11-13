@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Waste Process Hub | Sustainable Waste Management</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .hero-gradient { background: linear-gradient(135deg, #16a34a, #3b82f6); }
+    .tab-active { background-color: #3b82f6; color: white; }
+    .tab-inactive { background-color: #e5e7eb; color: #374151; }
+    .fade-in { animation: fadeIn 0.6s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px);} to { opacity: 1; transform: translateY(0);} }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50 backdrop-blur-lg bg-opacity-90">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold text-green-600">♻️ Waste Process Hub</h1>
+      <div class="hidden md:flex space-x-6 font-semibold text-gray-700">
+        <a href="#home" class="hover:text-green-600 transition">Home</a>
+        <a href="#process" class="hover:text-green-600 transition">Process</a>
+        <a href="#segregation" class="hover:text-green-600 transition">Segregation</a>
+        <a href="#statistics" class="hover:text-green-600 transition">Statistics</a>
+        <a href="#get-involved" class="hover:text-green-600 transition">Get Involved</a>
+        <a href="#learn-more" class="hover:text-green-600 transition">Learn More</a>
+      </div>
+      <button class="md:hidden p-2 border rounded-lg text-gray-600">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="hero-gradient text-white py-20 text-center px-6">
+    <h1 class="text-5xl font-bold mb-4">Transforming Waste into Worth 🌎</h1>
+    <p class="text-lg mb-8 text-gray-100 max-w-2xl mx-auto">
+      Join us in building a cleaner, greener, and more sustainable future through smarter waste management.
+    </p>
+    <a href="#process" class="bg-white text-green-700 font-semibold py-3 px-8 rounded-full hover:bg-gray-100 transition">Explore the Process</a>
+  </header>
+
+  <!-- Process Section -->
+  <section id="process" class="container mx-auto py-16 px-6">
+    <h2 class="text-4xl font-bold text-center text-gray-900 mb-10">Waste Management Process</h2>
+    <div class="flex flex-wrap justify-center gap-3 mb-10" id="process-tabs">
+      <button data-tab="collection" class="process-tab tab-active py-2 px-4 rounded-lg font-semibold shadow">Collection</button>
+      <button data-tab="sorting" class="process-tab tab-inactive py-2 px-4 rounded-lg font-semibold shadow">Sorting</button>
+      <button data-tab="recycling" class="process-tab tab-inactive py-2 px-4 rounded-lg font-semibold shadow">Recycling</button>
+      <button data-tab="composting" class="process-tab tab-inactive py-2 px-4 rounded-lg font-semibold shadow">Composting</button>
+      <button data-tab="recovery" class="process-tab tab-inactive py-2 px-4 rounded-lg font-semibold shadow">Energy Recovery</button>
+      <button data-tab="disposal" class="process-tab tab-inactive py-2 px-4 rounded-lg font-semibold shadow">Disposal</button>
+    </div>
+
+    <div id="process-content" class="bg-white p-8 rounded-2xl shadow-xl fade-in">
+      <div id="collection" class="process-panel">
+        <h3 class="text-2xl font-semibold text-green-600 mb-3">Collection & Transportation</h3>
+        <p class="text-gray-700 leading-relaxed">Waste is efficiently collected using eco-friendly trucks and transported to sorting facilities.</p>
+      </div>
+      <div id="sorting" class="process-panel hidden">
+        <h3 class="text-2xl font-semibold text-green-600 mb-3">Sorting & Separation</h3>
+        <p class="text-gray-700 leading-relaxed">Waste is divided into recyclables, compostables, and hazardous materials for processing.</p>
+      </div>
+      <div id="recycling" class="process-panel hidden">
+        <h3 class="text-2xl font-semibold text-green-600 mb-3">Recycling</h3>
+        <p class="text-gray-700 leading-relaxed">Plastic, paper, glass, and metals are repurposed into new materials, reducing landfill burden.</p>
+      </div>
+      <div id="composting" class="process-panel hidden">
+        <h3 class="text-2xl font-semibold text-green-600 mb-3">Composting</h3>
+        <p class="text-gray-700 leading-relaxed">Organic waste is decomposed into nutrient-rich compost that supports local farming.</p>
+      </div>
+      <div id="recovery" class="process-panel hidden">
+        <h3 class="text-2xl font-semibold text-green-600 mb-3">Energy Recovery</h3>
+        <p class="text-gray-700 leading-relaxed">Non-recyclable materials are converted into usable energy, reducing carbon footprints.</p>
+      </div>
+      <div id="disposal" class="process-panel hidden">
+        <h3 class="text-2xl font-semibold text-green-600 mb-3">Safe Disposal</h3>
+        <p class="text-gray-700 leading-relaxed">Remaining waste is disposed in engineered landfills with environmental safeguards.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Segregation Section -->
+  <section id="segregation" class="bg-gradient-to-r from-green-100 to-blue-100 py-20 px-6">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-6 text-gray-900">Waste Segregation at Source</h2>
+      <p class="text-gray-700 mb-8 max-w-3xl mx-auto">
+        Proper segregation ensures efficient recycling and minimizes pollution. Separate waste before disposal!
+      </p>
+      <div class="grid md:grid-cols-3 gap-10 mt-10">
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/1049/1049333.png" class="w-20 mx-auto mb-4">
+          <h3 class="font-semibold text-xl text-green-700 mb-2">Wet Waste</h3>
+          <p class="text-gray-600">Kitchen waste, peels, and food leftovers suitable for composting.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/3093/3093848.png" class="w-20 mx-auto mb-4">
+          <h3 class="font-semibold text-xl text-blue-700 mb-2">Dry Waste</h3>
+          <p class="text-gray-600">Paper, plastics, and metals that can be recycled efficiently.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
+          <img src="https://cdn-icons-png.flaticon.com/512/2970/2970777.png" class="w-20 mx-auto mb-4">
+          <h3 class="font-semibold text-xl text-red-700 mb-2">Hazardous Waste</h3>
+          <p class="text-gray-600">Includes batteries, chemicals, and e-waste that require safe handling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section id="statistics" class="container mx-auto py-20 px-6">
+    <h2 class="text-4xl font-bold text-center mb-10 text-gray-900">Waste Statistics Overview</h2>
+    <div class="grid md:grid-cols-2 gap-10">
+      <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+        <h3 class="text-xl font-semibold text-green-700 mb-4">Waste Composition</h3>
+        <canvas id="wastePieChart"></canvas>
+      </div>
+      <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+        <h3 class="text-xl font-semibold text-green-700 mb-4">Treatment Methods</h3>
+        <canvas id="wasteBarChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Involved -->
+  <section id="get-involved" class="bg-green-600 text-white py-20 text-center px-6">
+    <h2 class="text-4xl font-bold mb-6">Be Part of the Change 🌱</h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-100">
+      Participate in community clean-ups, educate others, and make a real impact on the environment.
+    </p>
+    <a href="https://swachhbharatmission.gov.in/" target="_blank" class="bg-white text-green-700 py-3 px-8 rounded-full font-semibold hover:bg-gray-100 transition">Join the Mission</a>
+  </section>
+
+  <!-- Learn More -->
+  <section id="learn-more" class="py-20 text-center bg-white">
+    <h2 class="text-4xl font-bold mb-4 text-gray-900">Learn More About Waste Management</h2>
+    <p class="text-gray-700 mb-6">Watch this short video to discover how waste can be managed effectively.</p>
+    <a href="https://youtu.be/tZEM5K72aVs" target="_blank" class="bg-green-600 text-white py-3 px-8 rounded-full hover:bg-green-700 font-semibold transition">Watch on YouTube</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8 text-center">
+    <p>© 2025 Waste Process Hub | Designed with 🌿 for a sustainable planet</p>
+  </footer>
+
+  <!-- Chart.js -->
+  <script>
+    const pieCtx = document.getElementById('wastePieChart').getContext('2d');
+    const barCtx = document.getElementById('wasteBarChart').getContext('2d');
+
+    const pieChart = new Chart(pieCtx, {
+      type: 'pie',
+      data: { labels: ['Organic','Plastic','Paper','Glass','Metal','Other'],
+        datasets: [{ data: [44,12,17,5,4,18], backgroundColor: ['#34d399','#60a5fa','#fbbf24','#f87171','#9ca3af','#a78bfa'] }] },
+      options: { plugins: { legend: { position: 'bottom' } } }
+    });
+
+    const barChart = new Chart(barCtx, {
+      type: 'bar',
+      data: { labels: ['Landfilled','Recycled','Composted','Incinerated'],
+        datasets: [{ data: [37,19,11,33], backgroundColor: ['#ef4444','#10b981','#fbbf24','#3b82f6'] }] },
+      options: { scales: { y: { beginAtZero: true } } }
+    });
+
+    // Tab interaction
+    const chartData = {
+      collection: { pie:[44,12,17,5,4,18], bar:[37,19,11,33] },
+      sorting:    { pie:[40,15,20,7,5,13], bar:[30,25,10,35] },
+      recycling:  { pie:[10,40,30,10,5,5], bar:[20,45,15,20] },
+      composting: { pie:[60,5,10,0,0,25],  bar:[10,20,60,10] },
+      recovery:   { pie:[20,10,10,0,0,60], bar:[15,20,15,50] },
+      disposal:   { pie:[10,5,5,0,0,80],   bar:[70,10,5,15] }
+    };
+
+    document.querySelectorAll('.process-tab').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.process-tab').forEach(b => b.classList.replace('tab-active','tab-inactive'));
+        btn.classList.replace('tab-inactive','tab-active');
+        document.querySelectorAll('.process-panel').forEach(p => p.classList.add('hidden'));
+        document.getElementById(btn.dataset.tab).classList.remove('hidden');
+        document.getElementById('process-content').classList.add('fade-in');
+
+        const d = chartData[btn.dataset.tab];
+        pieChart.data.datasets[0].data = d.pie;
+        barChart.data.datasets[0].data = d.bar;
+        pieChart.update();
+        barChart.update();
+      });
+    });
+  </script>
+</body>
+</html>

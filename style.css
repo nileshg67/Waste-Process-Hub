@@ -1,0 +1,23 @@
+/* Apply the Inter font */
+body {
+    font-family: "Inter", sans-serif;
+}
+
+/* Custom gradient for the hero section */
+.hero-gradient {
+    background: linear-gradient(115deg, #0ee950 0%, #3b880a 100%);
+}
+
+/* Style for the active tab */
+.tab-active {
+    background-color: #3b82f6; /* bg-blue-500 */
+    color: #ffffff; /* text-white */
+    border-color: #3b82f6; /* border-blue-500 */
+}
+
+/* Style for inactive tabs */
+.tab-inactive {
+    background-color: #ffffff; /* bg-white */
+    color: #374151; /* text-gray-700 */
+    border-color: #d1d5db; /* border-gray-300 */
+}
