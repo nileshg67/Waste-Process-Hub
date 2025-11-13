@@ -92,31 +92,83 @@
   </section>
 
   <!-- Segregation Section -->
-  <section id="segregation" class="bg-gradient-to-r from-green-100 to-blue-100 py-20 px-6">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold mb-6 text-gray-900">Waste Segregation at Source</h2>
-      <p class="text-gray-700 mb-8 max-w-3xl mx-auto">
-        Proper segregation ensures efficient recycling and minimizes pollution. Separate waste before disposal!
-      </p>
-      <div class="grid md:grid-cols-3 gap-10 mt-10">
-        <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
-          <img src="https://cdn-icons-png.flaticon.com/512/1049/1049333.png" class="w-20 mx-auto mb-4">
-          <h3 class="font-semibold text-xl text-green-700 mb-2">Wet Waste</h3>
-          <p class="text-gray-600">Kitchen waste, peels, and food leftovers suitable for composting.</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
-          <img src="https://cdn-icons-png.flaticon.com/512/3093/3093848.png" class="w-20 mx-auto mb-4">
-          <h3 class="font-semibold text-xl text-blue-700 mb-2">Dry Waste</h3>
-          <p class="text-gray-600">Paper, plastics, and metals that can be recycled efficiently.</p>
-        </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 hover:scale-105 transition">
-          <img src="https://cdn-icons-png.flaticon.com/512/2970/2970777.png" class="w-20 mx-auto mb-4">
-          <h3 class="font-semibold text-xl text-red-700 mb-2">Hazardous Waste</h3>
-          <p class="text-gray-600">Includes batteries, chemicals, and e-waste that require safe handling.</p>
-        </div>
+  <!-- Segregation Section -->
+<section id="segregation" class="bg-gradient-to-r from-green-100 to-blue-100 py-20 px-6">
+  <div class="container mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6 text-gray-900">Waste Segregation by Bin Color</h2>
+    <p class="text-gray-700 mb-10 max-w-3xl mx-auto">
+      Segregating waste properly helps ensure safe disposal, recycling, and reduces environmental hazards. 
+      Each color-coded bin is designated for a specific type of waste.
+    </p>
+
+    <div class="grid md:grid-cols-5 gap-8 mt-10">
+      <!-- Green Bin -->
+      <div class="bg-white rounded-xl shadow-lg p-6 border-t-8 border-green-500 hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/1049/1049333.png" class="w-20 mx-auto mb-4">
+        <h3 class="font-semibold text-xl text-green-700 mb-2">Green Bin</h3>
+        <p class="text-gray-600 mb-2">Used for <strong>Wet Waste</strong></p>
+        <ul class="text-sm text-gray-600">
+          <li>🍽️ Kitchen waste</li>
+          <li>🍌 Fruit & vegetable peels</li>
+          <li>🌿 Garden trimmings</li>
+          <li>☕ Tea & coffee residues</li>
+        </ul>
+      </div>
+
+      <!-- Blue Bin -->
+      <div class="bg-white rounded-xl shadow-lg p-6 border-t-8 border-blue-500 hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/3093/3093848.png" class="w-20 mx-auto mb-4">
+        <h3 class="font-semibold text-xl text-blue-700 mb-2">Blue Bin</h3>
+        <p class="text-gray-600 mb-2">Used for <strong>Dry Waste</strong></p>
+        <ul class="text-sm text-gray-600">
+          <li>📄 Paper & cardboard</li>
+          <li>🧴 Plastic bottles</li>
+          <li>🥫 Metal cans</li>
+          <li>🍾 Glass items</li>
+        </ul>
+      </div>
+
+      <!-- Red Bin -->
+      <div class="bg-white rounded-xl shadow-lg p-6 border-t-8 border-red-500 hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/2970/2970777.png" class="w-20 mx-auto mb-4">
+        <h3 class="font-semibold text-xl text-red-700 mb-2">Red Bin</h3>
+        <p class="text-gray-600 mb-2">Used for <strong>Medical Waste</strong></p>
+        <ul class="text-sm text-gray-600">
+          <li>🩹 Bandages, syringes</li>
+          <li>💊 Expired medicines</li>
+          <li>🧤 Used gloves & masks</li>
+          <li>🧪 Pathological waste</li>
+        </ul>
+      </div>
+
+      <!-- Grey Bin -->
+      <div class="bg-white rounded-xl shadow-lg p-6 border-t-8 border-gray-500 hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" class="w-20 mx-auto mb-4">
+        <h3 class="font-semibold text-xl text-gray-700 mb-2">Grey Bin</h3>
+        <p class="text-gray-600 mb-2">Used for <strong>Electronic Waste</strong></p>
+        <ul class="text-sm text-gray-600">
+          <li>💻 Old gadgets</li>
+          <li>🔋 Batteries</li>
+          <li>📱 Mobile phones</li>
+          <li>⚡ Chargers & cables</li>
+        </ul>
+      </div>
+
+      <!-- Yellow Bin -->
+      <div class="bg-white rounded-xl shadow-lg p-6 border-t-8 border-yellow-400 hover:scale-105 transition">
+        <img src="https://cdn-icons-png.flaticon.com/512/992/992700.png" class="w-20 mx-auto mb-4">
+        <h3 class="font-semibold text-xl text-yellow-600 mb-2">Yellow Bin</h3>
+        <p class="text-gray-600 mb-2">Used for <strong>Radioactive Waste</strong></p>
+        <ul class="text-sm text-gray-600">
+          <li>☢️ Laboratory materials</li>
+          <li>🔬 Research waste</li>
+          <li>🧫 Medical isotopes</li>
+          <li>⚗️ Contaminated equipment</li>
+        </ul>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Statistics -->
   <section id="statistics" class="container mx-auto py-20 px-6">
@@ -201,3 +253,4 @@
   </script>
 </body>
 </html>
+
